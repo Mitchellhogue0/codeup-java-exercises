@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ConsoleIO {
 
     public static void main(String[] args) {
@@ -13,5 +15,36 @@ public class ConsoleIO {
        String mySentence = String.format("I will sell this swamp for $%.2f per acre", currencyInPennies);
 
         System.out.println(mySentence);
+        System.out.println("-----------");
+
+
+        Scanner sc = new Scanner(System.in);
+//        System.out.println("what is your whole name?");
+//        String FirstName = sc.next();
+//        String LastName = sc.next();
+//        System.out.printf("You entered: %s %s\n", FirstName, LastName);
+
+        /* TODO: use the scanner to take in the name of the month you were born and print it back out
+    - remember to first prompt the user for the input
+ */
+//        System.out.println("What is the day, month, and year?");
+//        String day = sc.next();
+//        String month = sc.next();
+//        String year = sc.next();
+//        System.out.printf("You entered %s %s %s", day,month,year);
+
+//        System.out.println("Enter a numb3r: ");
+//        int myNum = sc.nextInt();
+//        System.out.println(myNum);
+
+        System.out.println("Stack your sentence! Type a sentence: ");
+        while (sc.hasNext()){
+            String word = sc.next();
+            if (word.equals("break")){
+                break;
+            }
+
+            System.out.println(word);
+        }
     }
 }
