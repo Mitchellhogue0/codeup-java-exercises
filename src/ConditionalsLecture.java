@@ -66,11 +66,15 @@ public class ConditionalsLecture {
         //TODO: using previous mini exercise, allow the user to input a new username several times until a unique username is entered.
 
 
-        for(String i = user4; i.equalsIgnoreCase(user1) || i.equalsIgnoreCase(user2) || i.equalsIgnoreCase(user3); ) {
-            System.out.println("That username is already taken");
-        }
-        System.out.println("That user name is accepted!");
+//        for(String i = user4; i.equalsIgnoreCase(user1) || i.equalsIgnoreCase(user2) || i.equalsIgnoreCase(user3); i) {
+//            System.out.println("That username is already taken");
+//        }
+//        System.out.println("That user name is accepted!");
 
+        while(user4.equalsIgnoreCase(user1) || user4.equalsIgnoreCase(user2) || user4.equalsIgnoreCase(user3)){
+            System.out.println("This username is already taken");
+        }
+        System.out.println("Username confirmed!");
 
     }
 }
