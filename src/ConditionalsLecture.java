@@ -18,8 +18,9 @@ public class ConditionalsLecture {
 
         System.out.println("Please enter your username: ");
         Scanner sc = new Scanner(System.in);
-        String user4 = sc.next();
-
+//        String user4 = sc.next();
+//
+//
 //        if (user4.equalsIgnoreCase(user1)){
 //            System.out.println("That username is already taken");
 //        }
@@ -31,6 +32,7 @@ public class ConditionalsLecture {
 //        if (user4.equalsIgnoreCase(user3)){
 //            System.out.println("That username is already taken");
 //        }
+//        System.out.println("Username Accepted!");
 
 //        switch (user4) {
 //            case "WahtDidney":
@@ -70,11 +72,14 @@ public class ConditionalsLecture {
 //            System.out.println("That username is already taken");
 //        }
 //        System.out.println("That user name is accepted!");
+        String user4 = sc.next();
+
 
         while(user4.equalsIgnoreCase(user1) || user4.equalsIgnoreCase(user2) || user4.equalsIgnoreCase(user3)){
-            System.out.println("This username is already taken");
+            System.out.println("This username is already taken, try again");
+            user4 = sc.next();
         }
-        System.out.println("Username confirmed!");
+        System.out.println("Username accepted!");
 
     }
 }
