@@ -74,12 +74,26 @@ public class ConditionalsLecture {
 //        System.out.println("That user name is accepted!");
         String user4 = sc.next();
 
+//
+//        while(user4.equalsIgnoreCase(user1) || user4.equalsIgnoreCase(user2) || user4.equalsIgnoreCase(user3)){
+//            System.out.println("This username is already taken, try again");
+//            user4 = sc.next();
+//        }
+//        System.out.println("Username accepted!");
 
-        while(user4.equalsIgnoreCase(user1) || user4.equalsIgnoreCase(user2) || user4.equalsIgnoreCase(user3)){
-            System.out.println("This username is already taken, try again");
-            user4 = sc.next();
+        // *AI Bot*
+
+        System.out.println("Hello, how are you? :)");
+        String input = sc.next();
+        if (input.equalsIgnoreCase("good")){
+            System.out.println("Awesome! I'm glad!!");
         }
-        System.out.println("Username accepted!");
-
+        if (input.equalsIgnoreCase("not too good")){
+            System.out.println("aww im sorry :( how can i help?");
+            String input2 = sc.next();
+        if (input2.equalsIgnoreCase("no")){
+            System.out.println("Okay... sorry I couldn't help more :/");
+        }
+        }
     }
 }
