@@ -37,14 +37,23 @@ public class ConsoleIO {
 //        int myNum = sc.nextInt();
 //        System.out.println(myNum);
 
-        System.out.println("Stack your sentence! Type a sentence: ");
-        while (sc.hasNext()){
-            String word = sc.next();
-            if (word.equals("break")){
-                break;
-            }
+//        System.out.println("Stack your sentence! Type a sentence: ");
+//        while (sc.hasNext()){
+//            String word = sc.next();
+//            if (word.equals("break")){
+//                break;
+//            }
+//
+//            System.out.println(word);
+//        }
 
-            System.out.println(word);
-        }
+        System.out.println("Please enter your favorite quote: ");
+
+        String FavoriteQuote = sc.nextLine();
+        System.out.println(FavoriteQuote);
+        System.out.println("How many words are in your favorite quote");
+        int QuoteWords = sc.nextInt();
+        System.out.println(QuoteWords);
+
     }
 }
