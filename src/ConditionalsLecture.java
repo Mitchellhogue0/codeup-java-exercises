@@ -100,6 +100,16 @@ public class ConditionalsLecture {
         //*hangman gam*
         System.out.println("Please enter a word for player two to guess!");
         String hangManWord = sc.next();
+        System.out.println("Now, player two, guess the word!");
+        String hangManGuess = sc.next();
+//        if (hangManGuess.equalsIgnoreCase(hangManWord)){
+//            System.out.println("WOW! That was the word!!");
+//        }
+        while(!hangManGuess.equalsIgnoreCase(hangManWord)){
+            System.out.println("That's not it! try again :)");
+            hangManGuess = sc.next();
+        }
 
+        System.out.println("YOU GOT IT! :D");
     }
 }
