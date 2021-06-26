@@ -83,17 +83,23 @@ public class ConditionalsLecture {
 
         // *AI Bot*
 
-        System.out.println("Hello, how are you? :)");
-        String input = sc.next();
-        if (input.equalsIgnoreCase("good")){
-            System.out.println("Awesome! I'm glad!!");
-        }
-        if (input.equalsIgnoreCase("not too good")){
-            System.out.println("aww im sorry :( how can i help?");
-            String input2 = sc.next();
-        if (input2.equalsIgnoreCase("no")){
-            System.out.println("Okay... sorry I couldn't help more :/");
-        }
-        }
+//        System.out.println("Hello, how are you? :)");
+//        String input = sc.next();
+//        if (input.equalsIgnoreCase("good")){
+//            System.out.println("Awesome! I'm glad!!");
+//        }
+//        if (input.equalsIgnoreCase("not too good")){
+//            System.out.println("aww im sorry :( how can i help?");
+//            String input2 = sc.next();
+//        if (input2.equalsIgnoreCase("no")){
+//            System.out.println("Okay... sorry I couldn't help more :/");
+//        }
+//        }
+
+
+        //*hangman gam*
+        System.out.println("Please enter a word for player two to guess!");
+        String hangManWord = sc.next();
+
     }
 }
