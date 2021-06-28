@@ -20,5 +20,11 @@ public class StringsLecture {
         } else {
             System.out.printf("Way off, my friend! My name isn't %s, it's  %s", userName, randomName);
         }
+
+        //        TODO: create a String variable that holds this sentence: "Red
+//         Orange Blue Yellow Green Purple". Prompt the user to type in
+//         their favorite color, if their fave color is the same as the
+//         first word in the String, then print out "my fave color:
+//         userColor is the first one". If their fave color is last, then print out "my fave color: userColor is last"
     }
 }
