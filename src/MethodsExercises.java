@@ -29,5 +29,13 @@ public class MethodsExercises {
         return   num1 % num2;
     }
 
+    public static void multiplicationWithout(int num){
+        if (num > 0){
+            System.out.printf("Trainer: You still have %s miles left! Keep going!\n", num);
+            num -= 2;
+            System.out.printf("Miles: %s\n", num);
+            multiplicationWithout(num);
+        }
+    }
 
 }
