@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsLecture {
 //    public static void main(String[] args) {
 //
@@ -26,9 +28,20 @@ public class MethodsLecture {
 //        return team;
 //    }
 
-    public static void main(String[] args) {
-        System.out.println(info("Mitchell", "Hogue", 21, "Do or do not..."));
 
+    public static void main(String[] args) {
+//        System.out.println(info("Mitchell", "Hogue", 21, "Do or do not..."));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tell us your name?");
+        String userName = sc.next();
+        System.out.println("How old are you?");
+        int userAge = sc.nextInt();
+        System.out.println("True/false, do you have any pets?");
+        boolean userPets = sc.nextBoolean();
+
+        System.out.printf("Your name is: %s", info(userName));
+        info(userAge);
+        info(userPets);
     }
 
     //Method overloading
@@ -58,11 +71,30 @@ public class MethodsLecture {
 //        100 years old!"
 //.      -accepts: your favorite quote. returns: "your fave quote"
 
-public static String info(String first, String last, int age, String quote){
-         return "Hello " + first + " " + last + "\n" + "age: " + age + "\n" + quote;
-}
+//public static String info(String first, String last, int age, String quote){
+//         return "Hello " + first + " " + last + "\n" + "age: " + age + "\n" + quote;
+//}
+
+//    WARMUP
+//    TODO: prompt a user to tell us about themselves (age, name, if
+//     they have any pets (true/false). Using method overloading, create
+//     methods that will return the first fact they told us about
+//     themselves. ex: I can input: 18 -- Laura -- false in which case I
+//     expect you to return: 18. but if I tell you my name first: Laura --
+//     false -- 18. I expect you to return "Laura" ... etc.
 
 
+    public static String info(String name){
+        return name;
+    }
+
+    public static int info(int age){
+        return age;
+    }
+
+    public static boolean info(boolean pets){
+        return pets;
+    }
 
 
 }
