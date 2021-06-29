@@ -110,10 +110,62 @@ public class MethodsLecture {
 //    }
 
 
+//    public static void main(String[] args) {
+//        // int is a primitive data type
+//        // Integer is an object with assignments and other things . .
+//        Integer numero = 10;
+//        System.out.println(numero.hashCode());
+//        System.out.println(returnNum(numero).hashCode());
+//    }
+//
+//    public static Integer returnNum(Integer randomNum){
+//        System.out.println(randomNum.hashCode());
+//        randomNum++;
+//        System.out.println(randomNum.hashCode());
+//        return randomNum; //shallow copy
+//    }
 
+    // RECURSION
 
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("How many seats are in the movie theatre?");
+//        int seatsLeft = sc.nextInt();
+//        movieTheatre(seatsLeft);
+//
+//    }
+//
+//    public static void movieTheatre(int seats){
+//        if(seats > 0){
+//            System.out.printf("There are %s seats available\n", seats);
+//            seats--;
+//            System.out.printf("seats: %s\n", seats);
+//            movieTheatre(seats);
+//        }
+//    }
 
+    //    TODO: you are a sports manager. Prompt your client who is training
+//     for a marathon how many miles they have to run today. You're the
+//     coach, so you decide how many miles they ran that day. print out
+//     how many miles they have left in training until they have 0 miles
+//     left.
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Trainer: How many miles did you run today?");
+        int miles = sc.nextInt();
+        trainer(miles);
+        System.out.println("Nice! you're good for the day");
+    }
+
+    public static void trainer(int miles){
+        if (miles > 0){
+            System.out.printf("Trainer: You still have %s miles left! Keep going!\n", miles);
+            miles--;
+            System.out.printf("Miles: %s\n", miles);
+            trainer(miles);
+        }
+    }
 
 }
 
