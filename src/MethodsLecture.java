@@ -161,7 +161,7 @@ public class MethodsLecture {
     public static void trainer(int miles){
         if (miles > 0){
             System.out.printf("Trainer: You still have %s miles left! Keep going!\n", miles);
-            miles--;
+            miles -= 2;
             System.out.printf("Miles: %s\n", miles);
             trainer(miles);
         }
