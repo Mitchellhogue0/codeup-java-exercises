@@ -29,38 +29,38 @@ public class MethodsLecture {
 //    }
 
 
-    public static void main(String[] args) {
-//        System.out.println(info("Mitchell", "Hogue", 21, "Do or do not..."));
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Tell us your name?");
-        String userName = sc.next();
-        System.out.println("How old are you?");
-        int userAge = sc.nextInt();
-        System.out.println("True/false, do you have any pets?");
-        boolean userPets = sc.nextBoolean();
-
-        System.out.printf("Your name is: %s", info(userName));
-        info(userAge);
-        info(userPets);
-    }
+//    public static void main(String[] args) {
+////        System.out.println(info("Mitchell", "Hogue", 21, "Do or do not..."));
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Tell us your name?");
+//        String userName = sc.next();
+//        System.out.println("How old are you?");
+//        int userAge = sc.nextInt();
+//        System.out.println("True/false, do you have any pets?");
+//        boolean userPets = sc.nextBoolean();
+//
+//        System.out.printf("Your name is: %s", info(userName));
+//        info(userAge);
+//        info(userPets);
+//    }
 
     //Method overloading
 
-    public static void greeting(){
-        System.out.println("Hello world");
-    }
-
-    public static void greeting(int randomNumber){
-        System.out.println(randomNumber);
-    }
-
-    public static void greeting(char randomChar){
-        System.out.println(randomChar);
-    }
-
-    public static void greeting(int randomNum, int anotherNum){
-        System.out.println(randomNum + anotherNum);
-    }
+//    public static void greeting(){
+//        System.out.println("Hello world");
+//    }
+//
+//    public static void greeting(int randomNumber){
+//        System.out.println(randomNumber);
+//    }
+//
+//    public static void greeting(char randomChar){
+//        System.out.println(randomChar);
+//    }
+//
+//    public static void greeting(int randomNum, int anotherNum){
+//        System.out.println(randomNum + anotherNum);
+//    }
 
 
     //    TODO: invoke a method that accepts (and returns) the following:
@@ -84,17 +84,35 @@ public class MethodsLecture {
 //     false -- 18. I expect you to return "Laura" ... etc.
 
 
-    public static String info(String name){
-        return name;
-    }
+//    public static String info(String name){
+//        return name;
+//    }
+//
+//    public static int info(int age){
+//        return age;
+//    }
+//
+//    public static boolean info(boolean pets){
+//        return pets;
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        String tryChangingMe = "Hello, random :)"; //ORIGINAL REFERENCE
+//        changeString(tryChangingMe);
+////        System.out.println(tryChangingMe);
+//    }
+//
+//    public static void changeString(String randomString) {
+//        System.out.println(randomString); // hello, random
+//        randomString = "this is random"; // hello random --> this is random
+//        System.out.println(randomString); // referencing the value that was passed in (copy) which we changed
+//    }
 
-    public static int info(int age){
-        return age;
-    }
 
-    public static boolean info(boolean pets){
-        return pets;
-    }
+
+
+
 
 
 }
