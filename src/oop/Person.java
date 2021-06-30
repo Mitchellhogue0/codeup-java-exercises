@@ -19,6 +19,10 @@ public class Person {
 
     }
 
+    public Person(){
+
+    }
+
 
 
     //Properties
@@ -54,5 +58,11 @@ public class Person {
 
     public void setNationality(String nationality) {
         this.nationality = nationality;
+    }
+
+    public String getEntertainment(String entertainment) {
+        return this.name + " is going to " + entertainment;
+
+
     }
 }
