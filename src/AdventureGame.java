@@ -16,7 +16,23 @@ public class AdventureGame {
     public static int heal = rand.nextInt(5) + 1;
 
     public static void roomTwo(){
+        String input;
 
+        System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
+                "fills the air. ");
+        commands("");
+        input = UI.nextLine();
+        if (input.equals("look around")){
+            System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
+                    " filled with cobwebs. You see a glimmer from under the broken stove");
+            commands(", look at glimmer");
+            roomTwo();
+        } else if (input.equals("look at glimmer")){
+            System.out.println("You reach your hand under the stove and feel for the glimmer, and you pull out a key. The" +
+                    " key is very ornate with the handle engraved with a Pegasus");
+            commands("");
+            roomTwo();
+        }
     }
 
     public static void beginningRoomLit(){
@@ -24,7 +40,7 @@ public class AdventureGame {
 
         System.out.println("You light a match to see your surroundings. You're in a dark, stone-walled basement with" +
                 " no light in any direction, you see a door in front of you, and to your left there is a picture of " +
-                "a man smiling with his cat");
+                "a man in a striped green shirt smiling with his dog");
         commands(", open door");
         input = UI.nextLine();
         if (input.equals("open door")) {
@@ -63,7 +79,7 @@ public class AdventureGame {
         } else if (input.equals("heal")){
             potion = potion - 1;
             HP = maxHP;
-            System.out.print("You are now at max HP, HP=" + HP);
+            System.out.printf("You are now at max HP, HP=%s\n", HP);
             beginningRoom();
         } else if (input.equals("pick up matchbox")){
             beginningRoomLit();
