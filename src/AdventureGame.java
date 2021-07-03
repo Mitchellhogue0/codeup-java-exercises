@@ -37,10 +37,13 @@ public class AdventureGame {
 
     public static void beginningRoomLit(){
        String input;
+       boolean shouldDescribeRoom = true;
 
-        System.out.println("You light a match to see your surroundings. You're in a dark, stone-walled basement with" +
-                " no light in any direction, you see a door in front of you, and to your left there is a picture of " +
-                "a man in a striped green shirt smiling with his dog");
+       if (shouldDescribeRoom) {
+           System.out.println("You light a match to see your surroundings. You're in a dark, stone-walled basement with" +
+                   " no light in any direction, you see a door in front of you, and to your left there is a picture of " +
+                   "a man in a striped green shirt smiling with his dog");
+       }
         commands(", open door");
         input = UI.nextLine();
         if (input.equals("open door")) {
@@ -49,14 +52,17 @@ public class AdventureGame {
         } else if (input.equals("look around") || input.equals("la")){
             System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
             commands(", pick up matchbox");
+            shouldDescribeRoom = false;
             beginningRoomLit();
         } else if (input.equals("check inventory") || input.equals("ci")){
             System.out.printf("potions: %s\n", potion);
+            shouldDescribeRoom = false;
             beginningRoomLit();
         } else if (input.equals("heal") || input.equals("h")){
             potion = potion - 1;
             HP = maxHP;
             System.out.print("You are now at max HP, HP=" + HP);
+            shouldDescribeRoom = false;
             beginningRoomLit();
         }
     }
@@ -65,34 +71,45 @@ public class AdventureGame {
 
     public static void beginningRoom(){
         String input;
+        boolean shouldDescribeRoom = true;
 
-        System.out.println("You wake up on the floor, completely forgetting how you got here or where you are.");
-        wait(3);
-        System.out.println("The room is very dark, you can barely see a thing. It is very musty and hard to breathe, you" +
-                " fear you might not be alone");
+        if (shouldDescribeRoom = true) {
+            System.out.println("You wake up on the floor, completely forgetting how you got here or where you are.");
+            wait(3);
+            System.out.println("The room is very dark, you can barely see a thing. It is very musty and hard to breathe, you" +
+                    " fear you might not be alone");
+        }
         wait(2);
         commands();
         input = UI.nextLine();
         if(input.equals("look around")){
             System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
             commands(", pick up matchbox");
+            shouldDescribeRoom = false;
             beginningRoom();
         } else if (input.equals("heal")){
             potion = potion - 1;
             HP = maxHP;
             System.out.printf("You are now at max HP, HP=%s\n", HP);
+            shouldDescribeRoom = false;
             beginningRoom();
         } else if (input.equals("pick up matchbox")){
             beginningRoomLit();
         } else if (input.equals("check inventory")){
             System.out.printf("potions: %s\n", potion);
+            shouldDescribeRoom = false;
             beginningRoom();
         } else{
             System.out.println("Please choose from the commands");
             commands();
             wait(2);
+            shouldDescribeRoom = false;
             beginningRoom();
         }
+    }
+
+    public static void router(){
+
     }
 
     public static void commands(){
@@ -117,17 +134,17 @@ public class AdventureGame {
         potion = 2;
 
         System.out.println("Welcome, young adventurer");
-        wait(3);
+        wait(1);
         System.out.println("Please tell us your name: ");
        Name = UI.nextLine();
         System.out.printf("%s, is it?\n", Name);
         wait(2);
         System.out.printf("Well, %s, this is no easy tale to tell\n", Name);
-        wait(3);
+        wait(1);
         System.out.println("However, I think you got guts, follow me");
-        wait(5);
+        wait(1);
         System.out.println("*CRACK*");
-        wait(5);
+        wait(1);
         lvl = 1;
         atk = 1;
         def = 1;
