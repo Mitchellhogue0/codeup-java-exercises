@@ -20,9 +20,9 @@ public class AdventureGame {
 
         System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
                 "fills the air. ");
-        commands("");
+        commands();
         input = UI.nextLine();
-        if (input.equals("look around")){
+        if (input.equals("look around") || input.equals("la")){
             System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
                     " filled with cobwebs. You see a glimmer from under the broken stove");
             commands(", look at glimmer");
@@ -46,20 +46,21 @@ public class AdventureGame {
         if (input.equals("open door")) {
             System.out.println("You open the door and begin to ascend the wooden stairs in front of you");
             roomTwo();
-        } else if (input.equals("look around")){
+        } else if (input.equals("look around") || input.equals("la")){
             System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
             commands(", pick up matchbox");
             beginningRoomLit();
-        } else if (input.equals("check inventory")){
+        } else if (input.equals("check inventory") || input.equals("ci")){
             System.out.printf("potions: %s\n", potion);
             beginningRoomLit();
-        } else if (input.equals("heal")){
+        } else if (input.equals("heal") || input.equals("h")){
             potion = potion - 1;
             HP = maxHP;
             System.out.print("You are now at max HP, HP=" + HP);
             beginningRoomLit();
         }
     }
+
 
 
     public static void beginningRoom(){
