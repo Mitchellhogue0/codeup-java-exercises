@@ -70,7 +70,7 @@ public class AdventureGame {
         System.out.println("The room is very dark, you can barely see a thing. It is very musty and hard to breathe, you" +
                 " fear you might not be alone");
         wait(2);
-        commands("");
+        commands();
         input = UI.nextLine();
         if(input.equals("look around")){
             System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
@@ -88,10 +88,14 @@ public class AdventureGame {
             beginningRoom();
         } else{
             System.out.println("Please choose from the commands");
-            commands("");
+            commands();
             wait(2);
             beginningRoom();
         }
+    }
+
+    public static void commands(){
+        System.out.println("Commands: look around , heal , check inventory");
     }
 
     public static void commands(String newCommands){
