@@ -18,9 +18,6 @@ public class AdventureGame {
     public static void roomTwo(){
         String input;
 
-        System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
-                "fills the air. ");
-        commands();
         input = UI.nextLine();
         if (input.equals("look around") || input.equals("la")){
             System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
@@ -32,6 +29,14 @@ public class AdventureGame {
                     " key is very ornate with the handle engraved with a Pegasus");
             commands("");
             roomTwo();
+        } else if (input.equals("check inventory") || input.equals("ci")){
+            System.out.printf("potions: %s\n", potion);
+            roomTwo();
+        } else if (input.equals("heal") || input.equals("h")){
+            potion = potion - 1;
+            HP = maxHP;
+            System.out.print("You are now at max HP, HP=" + HP);
+            roomTwo();
         }
     }
 
@@ -42,7 +47,7 @@ public class AdventureGame {
         input = UI.nextLine();
         if (input.equals("open door")) {
             System.out.println("You open the door and begin to ascend the wooden stairs in front of you");
-            roomTwo();
+            router("roomTwo");
         } else if (input.equals("look around") || input.equals("la")){
             System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
             commands(", pick up matchbox");
@@ -102,6 +107,11 @@ public class AdventureGame {
                     "a man in a striped green shirt smiling with his dog");
             commands(", open door");
             beginningRoomLit();
+        } else if (room.equals("roomTwo")){
+            System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
+                    "fills the air. ");
+            commands();
+            roomTwo();
         }
     }
 
