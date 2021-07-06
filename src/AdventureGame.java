@@ -19,24 +19,32 @@ public class AdventureGame {
         String input;
 
         input = UI.nextLine();
-        if (input.equals("look around") || input.equals("la")){
-            System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
-                    " filled with cobwebs. You see a glimmer from under the broken stove");
-            commands(", look at glimmer");
-            roomTwo();
-        } else if (input.equals("look at glimmer")){
-            System.out.println("You reach your hand under the stove and feel for the glimmer, and you pull out a key. The" +
-                    " key is very ornate with the handle engraved with a Pegasus");
-            commands("");
-            roomTwo();
-        } else if (input.equals("check inventory") || input.equals("ci")){
-            System.out.printf("potions: %s\n", potion);
-            roomTwo();
-        } else if (input.equals("heal") || input.equals("h")){
-            potion = potion - 1;
-            HP = maxHP;
-            System.out.print("You are now at max HP, HP=" + HP);
-            roomTwo();
+        switch (input) {
+            case "look around":
+            case "la":
+                System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
+                        " filled with cobwebs. You see a glimmer from under the broken stove");
+                commands(", look at glimmer");
+                roomTwo();
+                break;
+            case "look at glimmer":
+                System.out.println("You reach your hand under the stove and feel for the glimmer, and you pull out a key. The" +
+                        " key is very ornate with the handle engraved with a Pegasus");
+                commands("");
+                roomTwo();
+                break;
+            case "check inventory":
+            case "ci":
+                System.out.printf("potions: %s\n", potion);
+                roomTwo();
+                break;
+            case "heal":
+            case "h":
+                potion = potion - 1;
+                HP = maxHP;
+                System.out.print("You are now at max HP, HP=" + HP);
+                roomTwo();
+                break;
         }
     }
 
@@ -45,21 +53,29 @@ public class AdventureGame {
 
 
         input = UI.nextLine();
-        if (input.equals("open door")) {
-            System.out.println("You open the door and begin to ascend the wooden stairs in front of you");
-            router("roomTwo");
-        } else if (input.equals("look around") || input.equals("la")){
-            System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
-            commands(", pick up matchbox");
-            beginningRoomLit();
-        } else if (input.equals("check inventory") || input.equals("ci")){
-            System.out.printf("potions: %s\n", potion);
-            beginningRoomLit();
-        } else if (input.equals("heal") || input.equals("h")){
-            potion = potion - 1;
-            HP = maxHP;
-            System.out.print("You are now at max HP, HP=" + HP);
-            beginningRoomLit();
+        switch (input) {
+            case "open door":
+                System.out.println("You open the door and begin to ascend the wooden stairs in front of you");
+                router("roomTwo");
+                break;
+            case "look around":
+            case "la":
+                System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
+                commands(", pick up matchbox");
+                beginningRoomLit();
+                break;
+            case "check inventory":
+            case "ci":
+                System.out.printf("potions: %s\n", potion);
+                beginningRoomLit();
+                break;
+            case "heal":
+            case "h":
+                potion = potion - 1;
+                HP = maxHP;
+                System.out.print("You are now at max HP, HP=" + HP);
+                beginningRoomLit();
+                break;
         }
     }
 
@@ -70,48 +86,58 @@ public class AdventureGame {
 
 
         input = UI.nextLine();
-        if(input.equals("look around")){
-            System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
-            commands(", pick up matchbox");
-            beginningRoom();
-        } else if (input.equals("heal")){
-            potion = potion - 1;
-            HP = maxHP;
-            System.out.printf("You are now at max HP, HP=%s\n", HP);
-            beginningRoom();
-        } else if (input.equals("pick up matchbox")){
-            router("beginningRoomLit");
-        } else if (input.equals("check inventory")){
-            System.out.printf("potions: %s\n", potion);
-            beginningRoom();
-        } else{
-            System.out.println("Please choose from the commands");
-            commands();
-            wait(2);
-            beginningRoom();
+        switch (input) {
+            case "look around":
+                System.out.println("You can't see much, but you think you might see a matchbox lying on the ground");
+                commands(", pick up matchbox");
+                beginningRoom();
+                break;
+            case "heal":
+                potion = potion - 1;
+                HP = maxHP;
+                System.out.printf("You are now at max HP, HP=%s\n", HP);
+                beginningRoom();
+                break;
+            case "pick up matchbox":
+                router("beginningRoomLit");
+                break;
+            case "check inventory":
+                System.out.printf("potions: %s\n", potion);
+                beginningRoom();
+                break;
+            default:
+                System.out.println("Please choose from the commands");
+                commands();
+                wait(2);
+                beginningRoom();
+                break;
         }
     }
 
     public static void router(String room){
-        if (room.equals("beginningRoom")) {
-            System.out.println("You wake up on the floor, completely forgetting how you got here or where you are.");
-            wait(3);
-            System.out.println("The room is very dark, you can barely see a thing. It is very musty and hard to breathe, you" +
-                    " fear you might not be alone");
-            wait(2);
-            commands();
-            beginningRoom();
-        } else if (room.equals("beginningRoomLit")){
-            System.out.println("You light a match to see your surroundings. You're in a dark, stone-walled basement with" +
-                    " no light in any direction, you see a door in front of you, and to your left there is a picture of " +
-                    "a man in a striped green shirt smiling with his dog");
-            commands(", open door");
-            beginningRoomLit();
-        } else if (room.equals("roomTwo")){
-            System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
-                    "fills the air. ");
-            commands();
-            roomTwo();
+        switch (room) {
+            case "beginningRoom":
+                System.out.println("You wake up on the floor, completely forgetting how you got here or where you are.");
+                wait(3);
+                System.out.println("The room is very dark, you can barely see a thing. It is very musty and hard to breathe, you" +
+                        " fear you might not be alone");
+                wait(2);
+                commands();
+                beginningRoom();
+                break;
+            case "beginningRoomLit":
+                System.out.println("You light a match to see your surroundings. You're in a dark, stone-walled basement with" +
+                        " no light in any direction, you see a door in front of you, and to your left there is a picture of " +
+                        "a man in a striped green shirt smiling with his dog");
+                commands(", open door");
+                beginningRoomLit();
+                break;
+            case "roomTwo":
+                System.out.println("You walk into the room and see sunlight peaking through a broken window. The smell of mildew " +
+                        "fills the air. ");
+                commands();
+                roomTwo();
+                break;
         }
     }
 
