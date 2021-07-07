@@ -19,10 +19,29 @@ public class AdventureGame {
     public static void roomThree(){
         String input;
 
+        input = UI.nextLine();
         switch (input) {
             case "look around":
             case "la":
-                System.out.println();
+                System.out.println("When you look around, the area seems very abandoned. There hasn't been a soul in " +
+                        "this area for years, or at least no one has taken care of it. You see the bush moving in the " +
+                        "corner of your eye...");
+                commands(", investigate the bush");
+            case "investigate the bush":
+                System.out.println("");
+                break;
+            case "check inventory":
+            case "ci":
+                System.out.printf("potions: %s\n", potion);
+                roomTwo();
+                break;
+            case "heal":
+            case "h":
+                potion = potion - 1;
+                HP = maxHP;
+                System.out.print("You are now at max HP, HP=" + HP);
+                roomTwo();
+                break;
         }
     }
 
