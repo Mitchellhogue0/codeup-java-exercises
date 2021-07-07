@@ -3,11 +3,10 @@ package shapes;
 public class ShapesTest {
 
     public static void main(String[] args) {
-       Rectangle box1 = new Rectangle(5,4);
-        System.out.println(box1.getArea());
-        System.out.println(box1.getPerimeter());
-        Rectangle square1 = new Square(5);
-        System.out.println(square1.getPerimeter());
-        System.out.println(square1.getArea());
+       Quadrilateral myShape = new Square(6);
+        System.out.println(myShape.getLength());
+        System.out.println(myShape.getWidth());
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
     }
 }
