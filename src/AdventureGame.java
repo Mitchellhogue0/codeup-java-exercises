@@ -15,6 +15,22 @@ public class AdventureGame {
     public static int dam = rand.nextInt(5) + 1;
     public static int heal = rand.nextInt(5) + 1;
 
+
+    public static void roomThree(){
+        String input;
+
+        switch (input) {
+            case "look around":
+            case "la":
+                System.out.println();
+        }
+    }
+
+
+
+
+
+
     public static void roomTwo(){
         String input;
 
@@ -23,16 +39,19 @@ public class AdventureGame {
             case "look around":
             case "la":
                 System.out.println("You see old cabinets with paint peeling and missing doors. The corners of the room are" +
-                        " filled with cobwebs. You see a glimmer from under the broken stove");
-                commands(", look at glimmer");
+                        " filled with cobwebs. You see a glimmer from under the broken stove and to the left you see what" +
+                        " seems to be the front door of this strange building you're in");
+                commands(", look at glimmer , open front door");
                 roomTwo();
                 break;
             case "look at glimmer":
                 System.out.println("You reach your hand under the stove and feel for the glimmer, and you pull out a key. The" +
                         " key is very ornate with the handle engraved with a Pegasus");
-                commands("");
+                commands(" , open front door");
                 roomTwo();
                 break;
+            case "open front door":
+                System.out.println();
             case "check inventory":
             case "ci":
                 System.out.printf("potions: %s\n", potion);
@@ -137,6 +156,13 @@ public class AdventureGame {
                         "fills the air. ");
                 commands();
                 roomTwo();
+                break;
+            case "roomThree":
+                System.out.println("You walk through the door and the flash of the blinding sun blinds you for a few seconds." +
+                        " when you come to senses you see you're in the middle of the woods, trees surrounding you completely. " +
+                        "the house that you came out of looks very raggity and broken down.");
+                commands();
+                roomThree();
                 break;
         }
     }
