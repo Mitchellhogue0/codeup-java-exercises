@@ -2,6 +2,7 @@ public class Warmups {
 
     public static void main(String[] args) {
 
+        System.out.println("The amount of capital letters in the given string is: ");
         System.out.println(isCapital("The Very BiG Sentence"));
     }
 
