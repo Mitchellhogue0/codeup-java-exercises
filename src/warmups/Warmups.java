@@ -1,3 +1,5 @@
+package warmups;
+
 public class Warmups {
 
     public static void main(String[] args) {
