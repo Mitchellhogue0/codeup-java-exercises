@@ -8,11 +8,10 @@ public class ArraysExercises {
 
         String[] Persons = {"Karen", "Kyle", "Chad"};
 
-        for (String person : Persons) {
-//            System.out.println(person);
+
            String Person = "Tabitha";
             System.out.println(Arrays.toString(addPerson(Person, Persons)));
-        }
+
     }
 
     public static String[] addPerson(String person, String[] persons){
