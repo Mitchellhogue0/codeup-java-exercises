@@ -26,29 +26,36 @@ public class Calculator {
 
 
     public static void theOperators(String operator, int input, int input2) {
-        if (operator.equals("*")){
-            System.out.printf("%s %s %s = ",input,operator,input2);
-            System.out.println(input * input2);
-          input();
-        } else if (operator.equals("/")){
-            System.out.printf("%s %s %s = ",input,operator,input2);
-            System.out.println(input / input2);
-            input();
-        } else if (operator.equals("+")){
-            System.out.printf("%s %s %s = ",input,operator,input2);
-            System.out.println(input + input2);
-            input();
-        } else if (operator.equals("-")){
-            System.out.printf("%s %s %s = ",input,operator,input2);
-            System.out.println(input - input2);
-            input();
-        } else if (operator.equals("%")){
-            System.out.printf("%s %s %s = ",input,operator,input2);
-            System.out.println(input % input2);
-            input();
-        } else {
-            System.out.println("That is not an operator, try again: ");
-            input();
+        switch (operator) {
+            case "*":
+                System.out.printf("%s %s %s = ", input, operator, input2);
+                System.out.println(input * input2);
+                input();
+                break;
+            case "/":
+                System.out.printf("%s %s %s = ", input, operator, input2);
+                System.out.println(input / input2);
+                input();
+                break;
+            case "+":
+                System.out.printf("%s %s %s = ", input, operator, input2);
+                System.out.println(input + input2);
+                input();
+                break;
+            case "-":
+                System.out.printf("%s %s %s = ", input, operator, input2);
+                System.out.println(input - input2);
+                input();
+                break;
+            case "%":
+                System.out.printf("%s %s %s = ", input, operator, input2);
+                System.out.println(input % input2);
+                input();
+                break;
+            default:
+                System.out.println("That is not an operator, try again: ");
+                input();
+                break;
         }
     }
 }
