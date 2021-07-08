@@ -1,13 +1,13 @@
 package movies;
 
-public class Movie {
+public class Movie extends MoviesArray{
 
     private String name;
-    private String movie;
+    private String category;
 
-    public Movie(String name, String movie) {
+    public Movie(String name, String category) {
         this.name = name;
-        this.movie = movie;
+        this.category = category;
     }
 
     public Movie() {
@@ -22,11 +22,11 @@ public class Movie {
         this.name = name;
     }
 
-    public String getMovie() {
-        return movie;
+    public String getCategory() {
+        return category;
     }
 
-    public void setMovie(String movie) {
-        this.movie = movie;
+    public void setCategory(String movie) {
+        this.category = movie;
     }
 }
