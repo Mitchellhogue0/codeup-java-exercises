@@ -15,7 +15,6 @@ public class ArrayLists {
         System.out.printf("Currently ArrayList size: %s\n", stringArr.size());
         System.out.println(stringArr);
         System.out.println(stringArrCopy);
-
         stringArr.remove(1);
         System.out.println(stringArr);
     }
