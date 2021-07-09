@@ -43,7 +43,7 @@ input();
         System.out.println(Arrays.toString(addVacation(vacation,vacations)));
         System.out.println("Would you like to input another? ");
         String input = sc.nextLine();
-        if (input.equals("yes")){
+        if (input.equalsIgnoreCase("yes")){
             input();
         } else {
             return;
