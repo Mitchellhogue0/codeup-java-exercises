@@ -10,7 +10,7 @@ public class Student {
 
     public Student(String name, ArrayList<Integer> grades) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     public Student() {
