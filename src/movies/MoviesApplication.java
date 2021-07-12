@@ -30,7 +30,18 @@ public class MoviesApplication extends Movie{
             input();
         } else if (input.equals("2")){
             System.out.println(returnByGen(allMovies, "animated"));
-
+            input();
+        } else if (input.equals("3")){
+            System.out.println(returnByGen(allMovies, "drama"));
+            input();
+        } else if (input.equals("4")){
+            System.out.println(returnByGen(allMovies, "horror"));
+            input();
+        } else if (input.equals("5")){
+            System.out.println(returnByGen(allMovies, "scifi"));
+            input();
+        } else if (input.equals("0")){
+            System.out.println("Goodbye!");
         }
 
     }
@@ -41,6 +52,21 @@ public class MoviesApplication extends Movie{
         for (Movie movie : movies){
             if (genre.equals("animated")){
                 if (movie.getCategory().equals("animated")){
+                    moviesSoFar.append("\nName: ").append(movie.getName()).append(" \nGenre: ").append(movie.getCategory()).append("\n----------------");
+                }
+            }
+            if (genre.equals("drama")){
+                if (movie.getCategory().equals("drama")){
+                    moviesSoFar.append("\nName: ").append(movie.getName()).append(" \nGenre: ").append(movie.getCategory()).append("\n----------------");
+                }
+            }
+            if (genre.equals("horror")){
+                if (movie.getCategory().equals("horror")){
+                    moviesSoFar.append("\nName: ").append(movie.getName()).append(" \nGenre: ").append(movie.getCategory()).append("\n----------------");
+                }
+            }
+            if (genre.equals("scifi")){
+                if (movie.getCategory().equals("scifi")){
                     moviesSoFar.append("\nName: ").append(movie.getName()).append(" \nGenre: ").append(movie.getCategory()).append("\n----------------");
                 }
             }
