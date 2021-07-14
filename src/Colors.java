@@ -1,12 +1,17 @@
 
  class Red {
-    public void show () {
+    public void showMyFavoriteColorOfAllTimeInTheRainbow () {
         System.out.println("I am Red!");
     }
 }
 
  class Orange extends Red {
-    public void show () {
+     @Override
+     public void showMyFavoriteColorOfAllTimeInTheRainbow() {
+         super.showMyFavoriteColorOfAllTimeInTheRainbow();
+     }
+
+     public void showMyFavoriteColorOfAllTimeinTheRainbow () {
         System.out.println("I am Orange!");
     }
 }
@@ -16,8 +21,8 @@ public class Colors {
     public static void main(String[] args) {
         Red redobj = new Red();
         Orange orangeobj = new Orange();
-        redobj.show();
-        orangeobj.show();
+        redobj.showMyFavoriteColorOfAllTimeInTheRainbow();
+        orangeobj.showMyFavoriteColorOfAllTimeinTheRainbow();
 
     }
 }
