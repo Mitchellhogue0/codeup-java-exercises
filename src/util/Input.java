@@ -28,23 +28,32 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.printf("Please pick a number between %s and %s\n", min, max);
-        number = scanner.nextInt();
-        if (number < min){
-            getInt(min,max);
-        } else if (number > max){
-            getInt(min,max);
+        try {
+            System.out.printf("Please pick a number between %s and %s\n", min, max);
+            number = scanner.nextInt();
+            if (number < min) {
+                getInt(min, max);
+            } else if (number > max) {
+                getInt(min, max);
+            }
+        } catch (Exception e){
+            System.out.println("Not a valid number");
         }
+
         return this.number;
     }
 
     public double getDouble(double min, double max){
-        System.out.printf("Please pick a number between %s and %s\n", min, max);
-        number = scanner.nextInt();
-        if (number < min){
-            getDouble(min,max);
-        } else if (number > max){
-            getDouble(min,max);
+        try {
+            System.out.printf("Please pick a number between %s and %s\n", min, max);
+            number = scanner.nextInt();
+            if (number < min) {
+                getDouble(min, max);
+            } else if (number > max) {
+                getDouble(min, max);
+            }
+        } catch (Exception e){
+            System.out.println("Not a valid number");
         }
         return this.number;
     }
