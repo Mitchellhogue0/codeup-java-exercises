@@ -1,5 +1,6 @@
 package fileIO;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -21,9 +22,11 @@ public class FileIO {
 
         // Print out the final location of the file
         System.out.println(path.toAbsolutePath());
+
+
+        //Try to print the contents of the fileß
+        IOUtil.tryPrintContents(path);
     }
-
-
 
 
 }
