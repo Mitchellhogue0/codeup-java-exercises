@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 
 public class FileIO {
 
+    //Class's responsibility is to make everything else run
     public static void main(String[] args) {
         init();
     }
@@ -24,7 +25,7 @@ public class FileIO {
         System.out.println(path.toAbsolutePath());
 
 
-        //Try to print the contents of the fileß
+        //Try to print the contents of the fileIO
         IOUtil.tryPrintContents(path);
     }
 

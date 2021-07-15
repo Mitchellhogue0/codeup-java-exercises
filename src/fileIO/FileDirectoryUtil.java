@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
+//Class's responsibility is to check if path exists, to create directory and file
 public class FileDirectoryUtil {
 
     public static Path getPath(String fileName) {
