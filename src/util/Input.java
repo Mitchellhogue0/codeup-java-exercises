@@ -30,7 +30,7 @@ public class Input {
     public int getInt(int min, int max){
         try {
             System.out.printf("Please pick a number between %s and %s\n", min, max);
-            number = scanner.nextInt();
+            int number = Integer.parseInt(getString());
             if (number < min) {
                 getInt(min, max);
             } else if (number > max) {
@@ -46,7 +46,7 @@ public class Input {
     public double getDouble(double min, double max){
         try {
             System.out.printf("Please pick a number between %s and %s\n", min, max);
-            number = scanner.nextInt();
+            int number = Integer.parseInt(getString());
             if (number < min) {
                 getDouble(min, max);
             } else if (number > max) {
