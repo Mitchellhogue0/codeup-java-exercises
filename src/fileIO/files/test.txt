@@ -1,4 +1,4 @@
-this is a text file test
-this is for FileIO file
-were figuring out if this is going to work
-test test test
+THIS LINE WAS HERE FIRST, BACK OFF!
+This is a new line
+Another line!
+AND ANOTHER ONE
