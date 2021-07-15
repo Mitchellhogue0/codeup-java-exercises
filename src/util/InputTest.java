@@ -6,7 +6,8 @@ public class InputTest {
         Input input = new Input();
 
 //        input.getDouble(10,20);
-        input.getInt(10,20);
+//        input.getBinary();
+        input.getHex();
 
     }
 }
